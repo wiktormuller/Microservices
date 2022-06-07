@@ -2,6 +2,7 @@
 using PlatformService.Data;
 using PlatformService.Dtos;
 using PlatformService.Models;
+using PlatformService.SyncDataServices.Http;
 
 namespace DefaultNamespace;
 
@@ -10,10 +11,12 @@ namespace DefaultNamespace;
 public class PlatformsController : ControllerBase
 {
     private readonly IPlatformsRepository _platformsRepository;
+    private readonly ICommandDataClient _commandDataClient;
     
-    public PlatformsController(IPlatformsRepository platformsRepository)
+    public PlatformsController(IPlatformsRepository platformsRepository, ICommandDataClient commandDataClient)
     {
         _platformsRepository = platformsRepository;
+        _commandDataClient = commandDataClient;
     }
 
     [HttpGet]
@@ -52,7 +55,7 @@ public class PlatformsController : ControllerBase
     }
 
     [HttpPost]
-    public ActionResult<PlatformReadDto> Create(PlatformCreateDto request)
+    public async Task<ActionResult<PlatformReadDto>> Create(PlatformCreateDto request)
     {
         var platform = new Platform
         {
@@ -71,6 +74,15 @@ public class PlatformsController : ControllerBase
             Cost = platform.Cost,
             Publisher = platform.Publisher
         };
+
+        try
+        {
+            await _commandDataClient.SendPlatformToCommand(result);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"--> Could not send synchronously: {e.Message}");
+        }
 
         return CreatedAtRoute(nameof(GetById), new { Id = result.Id }, result);
     }
