@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using PlatformService.AsyncDataServices;
 using PlatformService.Data;
 using PlatformService.SyncDataServices.Http;
 
@@ -24,6 +25,7 @@ else
     builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMem"));
 }
 
+builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
 builder.Services.AddScoped<IPlatformsRepository, PlatformsRepository>();
 
 builder.Services.AddHttpClient<ICommandDataClient, CommandDataClient>();
