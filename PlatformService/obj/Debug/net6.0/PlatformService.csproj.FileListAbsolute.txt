@@ -60,3 +60,4 @@ C:\Users\Wiktor\Desktop\Microservices\PlatformService\obj\Debug\net6.0\refint\Pl
 C:\Users\Wiktor\Desktop\Microservices\PlatformService\obj\Debug\net6.0\PlatformService.pdb
 C:\Users\Wiktor\Desktop\Microservices\PlatformService\obj\Debug\net6.0\PlatformService.genruntimeconfig.cache
 C:\Users\Wiktor\Desktop\Microservices\PlatformService\obj\Debug\net6.0\ref\PlatformService.dll
+C:\Users\Wiktor\Desktop\Microservices\PlatformService\bin\Debug\net6.0\appsettings.Production.json

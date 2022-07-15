@@ -11,7 +11,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMem"));
+if (builder.Environment.IsProduction())
+{
+    Console.WriteLine("--> Using SqlServer Db");
+    var connectionString = builder.Configuration.GetConnectionString("PlatformsConn");
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseSqlServer(connectionString));
+}
+else
+{
+    Console.WriteLine("--> Using InMem Db");
+    builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMem"));
+}
 
 builder.Services.AddScoped<IPlatformsRepository, PlatformsRepository>();
 
@@ -32,6 +43,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-DbSeeder.PrepareSeeder(app);
+DbSeeder.PrepareSeeder(app, app.Environment.IsProduction());
 
 app.Run();
