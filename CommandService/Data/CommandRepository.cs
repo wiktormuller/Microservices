@@ -36,6 +36,11 @@ public class CommandRepository : ICommandRepository
         return _dbContext.Platforms.Any(p => p.Id == platformId);
     }
 
+    public bool ExternalPlatformExist(int externalPlatformId)
+    {
+        return _dbContext.Platforms.Any(p => p.ExternalId == externalPlatformId);
+    }
+
     public IEnumerable<Command> GetCommandsForPlatform(int platformId)
     {
         return _dbContext.Commands.Where(c => c.PlatformId == platformId)
