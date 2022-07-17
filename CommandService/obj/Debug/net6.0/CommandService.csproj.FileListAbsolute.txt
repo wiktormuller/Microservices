@@ -34,3 +34,7 @@ C:\Users\Wiktor\Desktop\Microservices\CommandService\obj\Debug\net6.0\CommandSer
 C:\Users\Wiktor\Desktop\Microservices\CommandService\obj\Debug\net6.0\ref\CommandService.dll
 C:\Users\Wiktor\Desktop\Microservices\CommandService\bin\Debug\net6.0\appsettings.Production.json
 C:\Users\Wiktor\Desktop\Microservices\CommandService\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\Wiktor\Desktop\Microservices\CommandService\bin\Debug\net6.0\Google.Protobuf.dll
+C:\Users\Wiktor\Desktop\Microservices\CommandService\bin\Debug\net6.0\Grpc.Core.Api.dll
+C:\Users\Wiktor\Desktop\Microservices\CommandService\bin\Debug\net6.0\Grpc.Net.Client.dll
+C:\Users\Wiktor\Desktop\Microservices\CommandService\bin\Debug\net6.0\Grpc.Net.Common.dll

@@ -1,9 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "j/2Euv1LTSARiHNAd/CAOPtK4vjacnVbxW7upClFmlsoAH5+ivtMVXVoHo9A1Jk9zS61p7wWFDWAdQ0bpybo7Q==",
+  "dgSpecHash": "+g+1rAEMmCUGdN7lLdCy2uum33rRbF/mPo/BHjb6mjYjb4bqAaoBtRUXwkpyOWAQFkVNiAz4v/x3UmYU5/HXLQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Wiktor\\Desktop\\Microservices\\CommandService\\CommandService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Wiktor\\.nuget\\packages\\google.protobuf\\3.21.2\\google.protobuf.3.21.2.nupkg.sha512",
+    "C:\\Users\\Wiktor\\.nuget\\packages\\grpc.core.api\\2.47.0\\grpc.core.api.2.47.0.nupkg.sha512",
+    "C:\\Users\\Wiktor\\.nuget\\packages\\grpc.net.client\\2.47.0\\grpc.net.client.2.47.0.nupkg.sha512",
+    "C:\\Users\\Wiktor\\.nuget\\packages\\grpc.net.common\\2.47.0\\grpc.net.common.2.47.0.nupkg.sha512",
+    "C:\\Users\\Wiktor\\.nuget\\packages\\grpc.tools\\2.48.0-pre1\\grpc.tools.2.48.0-pre1.nupkg.sha512",
     "C:\\Users\\Wiktor\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Wiktor\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.5\\microsoft.entityframeworkcore.6.0.5.nupkg.sha512",
     "C:\\Users\\Wiktor\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.5\\microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512",
